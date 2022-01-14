@@ -9,4 +9,4 @@
 ![То что Вам понадобится](https://content.instructables.com/ORIG/FWO/ZX6B/IBUMPCTI/FWOZX6BIBUMPCTI.png?auto=webp&frame=1&fit=bounds&md=216442f0eee52568b5bea0dda049da3e)
 
 То, что Вам понадобится
-
+**В случае как у нас Вам понадобится (конечный список деталей)**
