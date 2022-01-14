@@ -14,7 +14,6 @@
 * Плата Arduino
 * Flex sensor
   * (Кол-во штук)
-  *  [Ссылка для покупки датчика на AliExpress](https://aliexpress.ru/item/33006987477.html?scenario=pcDetailBottomMoreOtherSeller&tpp_rcmd_bucket_id=230346)
-  *  т. к. он не у всех есть
+  *  [Ссылка для покупки датчика на AliExpress](https://aliexpress.ru/item/33006987477.html?scenario=pcDetailBottomMoreOtherSeller&tpp_rcmd_bucket_id=230346) т. к. он не у всех есть
 * Резисторы
 * (Конечный список деталей)
