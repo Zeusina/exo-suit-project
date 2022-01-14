@@ -17,3 +17,6 @@
   *  [Ссылка для покупки датчика на AliExpress](https://aliexpress.ru/item/33006987477.html?scenario=pcDetailBottomMoreOtherSeller&tpp_rcmd_bucket_id=230346), т. к. он не у всех есть
 * Резисторы
 * (Конечный список деталей)
+
+[Сайт с которого мы взяли программу](https://codebender.cc/sketch:131729#%5Barduino-tutorial%5D%20Flex%20Sensor.ino)
+
