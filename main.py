@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtSerialPort import QSerialPort, QSerialPortInfo
 from PyQt5.QtCore import QIODevice, qsrand
@@ -25,11 +24,13 @@ def OnClose(): #Создаем функию для закрытия COM порт
     serial.close() #Закрываем COM порт
 
 def onRead(): #Создаем функцию для работы с последовательным портом
-    rx = int(str(serial.readLine(), 'utf-8')) # Создаем переменную и присваиваем ей значения считываемые из COM
+    rx = int(str(serial.readLine(), 'utf-8')) #Создаем переменную и присваиваем ей значения считываемые из COM
     print(rx)
+    ui.fsensorl1.setText(str(rx))
 
 ui.COMO.clicked.connect(OnOpen) #По нажатию кнопки OPEN вызываем функцию открытия порта
 ui.COMC.clicked.connect(OnClose) #По нажатию кнопки CLOSE вызываем функцию закрытия порта
 serial.readyRead.connect(onRead)
 
 ui.show() #Отображаем интерфейс
+app.exec() #Запускаем приложение
