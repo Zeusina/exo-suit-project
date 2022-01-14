@@ -18,5 +18,4 @@
 * Резисторы
 * (Конечный список деталей)
 
-[Сайт с которого мы взяли программу](https://codebender.cc/sketch:131729#%5Barduino-tutorial%5D%20Flex%20Sensor.ino)
 
