@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtSerialPort import QSerialPort, QSerialPortInfo
 from PyQt5.QtCore import QIODevice, qsrand
@@ -32,4 +33,3 @@ ui.COMC.clicked.connect(OnClose) #По нажатию кнопки CLOSE выз�
 serial.readyRead.connect(onRead)
 
 ui.show() #Отображаем интерфейс
-app.exec() #Запускаем приложение
