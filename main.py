@@ -16,6 +16,14 @@ for port in ports: #Из всей информации достаем назва
     portlist.append(port.portName()) # Прибавляем названия портов к текущему значению в списке
 ui.ComS.addItems(portlist) #Отображаем полученный список портов в визуальном интерфейсе
 
+def byte_conv(byte): #Пишем функцию для конвертации набора байтов в строку
+    s = list(str(byte)) #Создаем список из входящего элемента
+    del s [:2] #Удаляем первые три символа
+    del s [-1:-6:-1] #Удаляем последние 6 символов
+    if '' == ''.join(s): #Проверяем, если ничего не пришло
+        s = ['0'] #Значение == 0
+    return int(''.join(s)) #Возвращаем сконвертированое в число значение
+
 def OnOpen(): #Создаем функцию для открытия COM порта
     serial.setPortName(ui.ComS.currentText()) #Задаем имя порта из списка
     serial.open(QIODevice.ReadWrite) #Открываем COM порт
@@ -24,9 +32,9 @@ def OnClose(): #Создаем функию для закрытия COM порт
     serial.close() #Закрываем COM порт
 
 def onRead(): #Создаем функцию для работы с последовательным портом
-    rx = int(str(serial.readLine(), 'utf-8')) #Создаем переменную и присваиваем ей значения считываемые из COM
-    print(rx)
-    ui.fsensorl1.setText(str(rx))
+    rx = serial.readLine() #Создаем переменную и присваиваем ей значения считываемые из COM
+    print(byte_conv(rx))
+    ui.fsensorl1.setText(str(byte_conv(rx)))
 
 ui.COMO.clicked.connect(OnOpen) #По нажатию кнопки OPEN вызываем функцию открытия порта
 ui.COMC.clicked.connect(OnClose) #По нажатию кнопки CLOSE вызываем функцию закрытия порта
