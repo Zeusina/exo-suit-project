@@ -33,8 +33,8 @@ def OnClose(): #Создаем функию для закрытия COM порт
 
 def onRead(): #Создаем функцию для работы с последовательным портом
     rx = serial.readLine() #Создаем переменную и присваиваем ей значения считываемые из COM
-    print(byte_conv(rx))
-    ui.fsensorl1.setText(str(byte_conv(rx)))
+    ui.fsensorl1.setText(str(byte_conv(rx))) #Устанавливаем текст для заголовка(текстовое отображение значений)
+    ui.fsensorb1.setValue(int(byte_conv(rx)))
 
 ui.COMO.clicked.connect(OnOpen) #По нажатию кнопки OPEN вызываем функцию открытия порта
 ui.COMC.clicked.connect(OnClose) #По нажатию кнопки CLOSE вызываем функцию закрытия порта
