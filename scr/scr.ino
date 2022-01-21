@@ -17,6 +17,6 @@ void loop(){
   value = analogRead(flexPin);         //Read and save analog value from potentiometer
   Serial.println(value);               //Print value
   value = map(value, 700, 900, 0, 255);//Map value 0-1023 to 0-255 (PWM)
-  delay(100);                          //Small delay
+  delay(300);                          //Small delay
   
 }
