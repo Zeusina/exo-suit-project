@@ -73,10 +73,10 @@
         <item>
          <widget class="QProgressBar" name="fsensorb1">
           <property name="minimum">
-           <number>27</number>
+           <number>0</number>
           </property>
           <property name="maximum">
-           <number>133</number>
+           <number>150</number>
           </property>
           <property name="value">
            <number>83</number>
