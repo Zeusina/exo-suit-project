@@ -12,11 +12,22 @@ void setup(){
 
 }
 
+  float k = 0.1;  // коэффициент фильтрации, 0.0-1.0
+
+  // бегущее среднее
+  float expRunningAverage(float newVal) {
+  static float filVal = 0;
+  filVal += (newVal - filVal) * k;
+  return filVal;
+  }
+
 void loop(){
   
   value = analogRead(flexPin);         //Read and save analog value from potentiometer
-  Serial.println(value);               //Print value
   value = map(value, 700, 900, 0, 255);//Map value 0-1023 to 0-255 (PWM)
+  
+  value = expRunningAverage(float(value));
+  Serial.println(value);               //Print value
   delay(300);                          //Small delay
   
 }
